@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+    /* Carousel base class */
+    .main {
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    /* Since positioning the image, we need to help out the caption */
+    .main-caption {
+      /* bottom: 3rem; */
+      margin-top: 150px;
+      z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .main-item {
+      height: 300px;
+    }
+
+    .main-item>svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      /* height: 100%; */
+      z-index: -100;
+    }
+
+    .main form {
+      justify-content: center;
+    }
+
+    .section-title {
+      text-align: center;
+    }
+
+    footer .copyright {
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-transparent mb-4">
+      <div class=" container">
+        <a class="navbar-brand" href="#">Top navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse row" id="navbarCollapse">
+          <div class="col-12" style="text-align: right;">
+            <a href="mailto:terveraosu@gmail.com">terveraosu@gmail.com</a> |
+            <a href="tel:+2348088047611">+2348088047611</a>
+          </div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Seller <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Buyers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonial</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-success nav-link" href="#">Contact Us</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Beginning of Banner -->
+    <div class="container-fluid main main-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+        <rect width="100%" height="100%" fill="#777" /></svg>
+      <div class="container">
+        <div class="main-caption">
+          <h1>Another example headline.</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+            metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <form class="form-inline mx-auto">
+            <p>
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mb-2 mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+
+              <label class="sr-only" for="inlineFormInputName2">Name</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+
+              <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  <!-- End of banner -->
+    <section>
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title my-4">Featured Houses</h2>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title my-4">Recent Listed Houses</h2>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                  dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-12">
+            <h2 class="section-title my-4">Agents Near You</h2>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="rounded" width="105" height="105" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="rounded" width="105" height="105" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div
+              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="rounded" width="105" height="105" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <svg class="rounded" width="105" height="105" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="subscribe py-5 bg-light">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-12">
+            <h2 class="section-title my-4 font-weight-normal text-align-center">Stay in Touch</h2>
+          </div>
+          <form class="form-signin mx-auto">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Subscrbe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row border-btm py-5">
+        <div class="col-3">
+          <h4>Site Map</h4>
+          <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+        </div>
+        <div class="col-3">
+          <h4>Mortgage Rate</h4>
+          <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+        </div>
+        <div class="col-3">
+          <h4>Company</h4>
+          <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+        </div>
+        <div class="col-3">
+          <h4>Help Line</h4>
+          <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row copyright">
+        <p class="">All rigths reserved @truetechcode 2019</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
