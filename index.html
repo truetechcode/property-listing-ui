@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 
   <style>
     /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
     /* Carousel base class */
     .main {
       margin-bottom: 4rem;
@@ -24,6 +24,7 @@
       /* bottom: 3rem; */
       margin-top: 150px;
       z-index: 10;
+      color: #fff;
     }
 
     /* Declare heights because of positioning of img element */
@@ -31,12 +32,12 @@
       height: 300px;
     }
 
-    .main-item>svg {
+    .main-item>.mask>img {
       position: absolute;
       top: 0;
       left: 0;
       min-width: 100%;
-      /* height: 100%; */
+      height: 900px;
       z-index: -100;
     }
 
@@ -44,12 +45,40 @@
       justify-content: center;
     }
 
+    .round {
+      border-radius: 50px;
+    }
     .section-title {
       text-align: center;
     }
 
     footer .copyright {
       justify-content: center;
+    }
+
+    nav .top-nav a {
+      color: #ffffff;
+    }
+    .banner {
+      background: url(assets/img/jesse-roberts-561igiTyvSk-unsplash.jpg) bottom center no-repeat;
+      background-size: cover;
+      z-index: -100;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+    }
+
+    .mask {
+      background: #0000008c;
+      background-size: cover;
+      z-index: -50;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
     }
   </style>
 </head>
@@ -58,15 +87,19 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-transparent mb-4">
       <div class=" container">
-        <a class="navbar-brand" href="#">Top navbar</a>
+        <a class="navbar-brand" href="#">Logo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse row" id="navbarCollapse">
-          <div class="col-12" style="text-align: right;">
-            <a href="mailto:terveraosu@gmail.com">terveraosu@gmail.com</a> |
-            <a href="tel:+2348088047611">+2348088047611</a>
+          <div class="col-12 top-nav" style="display: flex; justify-content: end;">
+            <div class="flex" style="justify-content: space-between; display: flex; width: 40%; color: #ffffff;">
+            <a href="mailto:terveraosu@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> terveraosu@gmail.com</a>
+            <a href="tel:+2348088047611"><i class="fa fa-phone" aria-hidden="true"></i> +2348088047611</a>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
           </div>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -94,34 +127,32 @@
 
   <!-- Beginning of Banner -->
     <div class="container-fluid main main-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-        <rect width="100%" height="100%" fill="#777" /></svg>
+      <div class="banner"></div>
+      <div class="mask">
+      </div>      
       <div class="container">
         <div class="main-caption">
-          <h1>Another example headline.</h1>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-            metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <h3 class="font-weight-bold">Find The Perfect</h3>
+          <h1 class="font-weight-bolder">Real Estate Agent Near You.</h1>
           <form class="form-inline mx-auto">
             <p>
               <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
               <select class="custom-select mb-2 mr-sm-2" id="inlineFormCustomSelect">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected>Find Home</option>
+                <option value="1">Find Land</option>
               </select>
 
-              <label class="sr-only" for="inlineFormInputName2">Name</label>
-              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+              <label class="sr-only" for="inlineFormInputName2">Location</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="City, Town, State, Address">
 
-              <button type="submit" class="btn btn-primary mb-2">Submit</button>
+              <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>              
             </p>
           </form>
         </div>
       </div>
     </div>
   <!-- End of banner -->
+
     <section>
     <div class="album py-5 bg-light">
       <div class="container">
@@ -132,67 +163,69 @@
           </div>
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
+              <div class="card-img">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/patrick-perkins-3wylDrjxH-E-unsplash.jpg" alt="card-image">
+              </div>
               <div class="card-body">
+                <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
+                <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
+                <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
+                <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+              </div>                
+              <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <a href="#" class="card-link">Read More</a>
+                      <small class="text-muted">N 9,000,000</small>
+                    </div>                  
+                </div>              
             </div>
           </div>
+
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
+              <div class="card mb-4 shadow-sm">
+                  <div class="card-img">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/ralph-kayden-2d4lAQAlbDA-unsplash.jpg" alt="card-image">
+                    </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                  <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
+                  <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
+                  <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+                </div>                
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="card-link">Read More</a>
+                        <small class="text-muted">N 9,000,000</small>
+                      </div>                  
+                  </div>              
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
+
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-img">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/scott-webb-1ddol8rgUH8-unsplash.jpg" alt="card-image">
+                      </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                      content. This content is a little bit longer.</p>
+                    <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
+                    <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
+                    <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+                  </div>                
+                  <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <a href="#" class="card-link">Read More</a>
+                          <small class="text-muted">N 9,000,000</small>
+                        </div>                  
+                    </div>              
                 </div>
               </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -207,69 +240,70 @@
             <h2 class="section-title my-4">Recent Listed Houses</h2>
           </div>
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
+              <div class="card mb-4 shadow-sm">
+                  <div class="card-img">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/stephan-bechert-yFV39g6AZ5o-unsplash.jpg" alt="card-image">
+                    </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                  <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
+                  <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
+                  <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+                </div>                
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="card-link">Read More</a>
+                        <small class="text-muted">N 9,000,000</small>
+                      </div>                  
+                  </div>              
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
+  
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-img">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/irina-murza-PJMbzWAz26M-unsplash.jpg" alt="card-image">
+                      </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                      content. This content is a little bit longer.</p>
+                    <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
+                    <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
+                    <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+                  </div>                
+                  <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <a href="#" class="card-link">Read More</a>
+                          <small class="text-muted">N 9,000,000</small>
+                        </div>                  
+                    </div>              
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+  
+              <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                      <div class="card-img">
+                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/jesse-roberts-561igiTyvSk-unsplash.jpg" alt="card-image">
+                        </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                      <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
+                      <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
+                      <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+                    </div>                
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="card-link">Read More</a>
+                            <small class="text-muted">N 9,000,000</small>
+                          </div>                  
+                      </div>              
                   </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div>        </div>
       </div>
     </div>
   </section>
@@ -278,77 +312,81 @@
     <div class="album py-5 bg-light">
       <div class="container">
         <div class="row mb-2">
-          <div class="col-12">
-            <h2 class="section-title my-4">Agents Near You</h2>
+          <div class="col-6">
+              <div class="col-12">
+                  <h2 class="section-title my-4">Agents Near You</h2>
+              </div>      
           </div>
-          <div class="col-md-6">
-            <div
-              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                <a href="#" class="stretched-link">Continue reading</a>
-              </div>
-              <div class="col-auto d-none d-lg-block">
-                  <svg class="rounded" width="105" height="105" xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em">Thumbnail</text>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div
-              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                <a href="#" class="stretched-link">Continue reading</a>
-              </div>
-              <div class="col-auto d-none d-lg-block">
-                  <svg class="rounded" width="105" height="105" xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em">Thumbnail</text>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div
-              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                <a href="#" class="stretched-link">Continue reading</a>
-              </div>
-              <div class="col-auto d-none d-lg-block">
-                  <svg class="rounded" width="105" height="105" xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em">Thumbnail</text>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div
-              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-success">Design</strong>
-                <a href="#" class="stretched-link">Continue reading</a>
-              </div>
-              <div class="col-auto d-none d-lg-block">
-                <svg class="rounded" width="105" height="105" xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em">Thumbnail</text>
-                </svg>
-              </div>
-            </div>
+          <div class="col-6">
+              <div class="col-md-12">
+                  <div
+                    class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col py-2 px-4 d-flex flex-column position-static">
+                      <strong class="d-inline-block mb-2 text-primary">World</strong>
+                      <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="round" width="70" height="70" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                          dy=".3em">Thumbnail</text>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                    <div
+                      class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                      <div class="col py-2 px-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                      </div>
+                      <div class="col-auto d-none d-lg-block">
+                          <svg class="round" width="70" height="70" xmlns="http://www.w3.org/2000/svg"
+                          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em">Thumbnail</text>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div
+                        class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col py-2 px-4 d-flex flex-column position-static">
+                          <strong class="d-inline-block mb-2 text-primary">World</strong>
+                          <a href="#" class="stretched-link">Continue reading</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <svg class="round" width="70" height="70" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                              dy=".3em">Thumbnail</text>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div
+                          class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                          <div class="col py-2 px-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">World</strong>
+                            <a href="#" class="stretched-link">Continue reading</a>
+                          </div>
+                          <div class="col-auto d-none d-lg-block">
+                              <svg class="round" width="70" height="70" xmlns="http://www.w3.org/2000/svg"
+                              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em">Thumbnail</text>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                                    
           </div>
         </div>
       </div>
@@ -362,10 +400,10 @@
           <div class="col-12">
             <h2 class="section-title my-4 font-weight-normal text-align-center">Stay in Touch</h2>
           </div>
-          <form class="form-signin mx-auto">
+          <form class="form-inline mx-auto">
             <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Subscrbe</button>
+            <input type="email" id="inputEmail" class="form-control mb-2 mr-sm-2" placeholder="Email address" required autofocus>
+            <button class="btn btn-primary mb-2" type="submit">Subscrbe</button>
           </form>
         </div>
       </div>
