@@ -7,9 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 
+  <!--import bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
   <style>
     /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -48,6 +54,7 @@
     .round {
       border-radius: 50px;
     }
+
     .section-title {
       text-align: center;
     }
@@ -56,8 +63,27 @@
       justify-content: center;
     }
 
+    footer .copyright p {
+      text-align: center;
+    }
+    
+    nav .flex {
+      justify-content: space-between; 
+      display: flex; 
+      width: 40%; 
+      color: #ffffff;
+    }
+    nav .top-nav {
+      display: flex; 
+      justify-content: end;
+    }
+
     nav .top-nav a {
       color: #ffffff;
+    }
+
+    .nav-icon {
+      padding: .5rem 1rem;
     }
     .banner {
       background: url(assets/img/jesse-roberts-561igiTyvSk-unsplash.jpg) bottom center no-repeat;
@@ -80,6 +106,62 @@
       left: 0;
       min-width: 100%;
     }
+
+    .card .type {
+      display: flex;
+      position: absolute;
+      height: 50px;
+      width: 200px;
+      top: 0;
+    }
+
+    .card .type .one {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 50%;
+      color: #555555;
+      background: aliceblue;
+    }
+
+    .card .type .two {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 50%;
+      color: #ffffff;
+      background: red;
+    }
+
+    /* On screens that are 992px wide or less, go from four columns to two columns */
+    @media screen and (max-width: 992px) {
+      nav .top-nav {
+        display: none;
+      }
+    }
+
+    /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .subscribe button {
+        margin: 0 auto;
+      }
+
+      nav ul.navbar-nav {
+        position: absolute;
+        background:#000000c2;
+        width: 100%;
+        margin: auto 0px;
+        z-index: 100;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav .top-nav {
+        display: none;
+      }
+    }    
   </style>
 </head>
 
@@ -93,15 +175,16 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse row" id="navbarCollapse">
-          <div class="col-12 top-nav" style="display: flex; justify-content: end;">
-            <div class="flex" style="justify-content: space-between; display: flex; width: 40%; color: #ffffff;">
-            <a href="mailto:terveraosu@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> terveraosu@gmail.com</a>
-            <a href="tel:+2348088047611"><i class="fa fa-phone" aria-hidden="true"></i> +2348088047611</a>
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
+          <div class="col-12 top-nav">
+            <div class="flex col-sm-12 col-md-8">
+              <a href="mailto:terveraosu@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>
+                terveraosu@gmail.com</a>
+              <a href="tel:+2348088047611"><i class="fa fa-phone" aria-hidden="true"></i> +2348088047611</a>
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
           </div>
-          </div>
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-lg-auto md-sm-1">
             <li class="nav-item active">
               <a class="nav-link" href="#">Seller <span class="sr-only">(current)</span></a>
             </li>
@@ -126,34 +209,35 @@
   </header>
 
   <!-- Beginning of Banner -->
-    <div class="container-fluid main main-item">
-      <div class="banner"></div>
-      <div class="mask">
-      </div>      
-      <div class="container">
-        <div class="main-caption">
-          <h3 class="font-weight-bold">Find The Perfect</h3>
-          <h1 class="font-weight-bolder">Real Estate Agent Near You.</h1>
-          <form class="form-inline mx-auto">
-            <p>
-              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-              <select class="custom-select mb-2 mr-sm-2" id="inlineFormCustomSelect">
-                <option selected>Find Home</option>
-                <option value="1">Find Land</option>
-              </select>
+  <div class="container-fluid main main-item" id="main">
+    <div class="banner"></div>
+    <div class="mask">
+    </div>
+    <div class="container">
+      <div class="main-caption">
+        <h3 class="font-weight-bold">Find The Perfect</h3>
+        <h1 class="font-weight-bolder">Real Estate Agent Near You.</h1>
+        <form class="form-inline mx-auto">
+          <p>
+            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+            <select class="custom-select mb-2 mr-sm-2" id="inlineFormCustomSelect">
+              <option selected>Find Home</option>
+              <option value="1">Find Land</option>
+            </select>
 
-              <label class="sr-only" for="inlineFormInputName2">Location</label>
-              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="City, Town, State, Address">
+            <label class="sr-only" for="inlineFormInputName2">Location</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
+              placeholder="City, Town, State, Address">
 
-              <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>              
-            </p>
-          </form>
-        </div>
+            <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>
+          </p>
+        </form>
       </div>
     </div>
+  </div>
   <!-- End of banner -->
 
-    <section>
+  <section id="featured">
     <div class="album py-5 bg-light">
       <div class="container">
 
@@ -161,239 +245,247 @@
           <div class="col-12">
             <h2 class="section-title my-4">Featured Houses</h2>
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-12 col-md-12 col-lg-4">
             <div class="card mb-4 shadow-sm">
               <div class="card-img">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/patrick-perkins-3wylDrjxH-E-unsplash.jpg" alt="card-image">
+                <div class="type">
+                  <div class="one"><small class="text-muted font-weight-bold">For Sell</small></div>
+                  <div class="two"><small class="text-light font-weight-bold">N 9,000,000</small></div>
+                </div>
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  src="assets/img/patrick-perkins-3wylDrjxH-E-unsplash.jpg" alt="card-image">
               </div>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
-                <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
+                <h5 class="card-title">Property title</h5>
+                <p class="card-text">This is where the property discription will go that is like the address and other
+                  neccessary content may want to go here.</p>
+                <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 3</a>
+                <a href="" class="btn btn-success btn-sm disabled">Kitchen | 1</a>
                 <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
-              </div>                
+              </div>
               <div class="card-footer">
-                  <div class="d-flex justify-content-between align-items-center">
-                      <a href="#" class="card-link">Read More</a>
-                      <small class="text-muted">N 9,000,000</small>
-                    </div>                  
-                </div>              
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                  <div class="card-img">
-                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/ralph-kayden-2d4lAQAlbDA-unsplash.jpg" alt="card-image">
-                    </div>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                  <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
-                  <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
-                  <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
-                </div>                
-                <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="#" class="card-link">Read More</a>
-                        <small class="text-muted">N 9,000,000</small>
-                      </div>                  
-                  </div>              
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-img">
+                <div class="type">
+                  <div class="one"><small class="text-muted font-weight-bold">For Sell</small></div>
+                  <div class="two"><small class="text-light font-weight-bold">N 9,000,000</small></div>
+                </div>
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  src="assets/img/ralph-kayden-2d4lAQAlbDA-unsplash.jpg" alt="card-image">
               </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-img">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/scott-webb-1ddol8rgUH8-unsplash.jpg" alt="card-image">
-                      </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                      content. This content is a little bit longer.</p>
-                    <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
-                    <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
-                    <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
-                  </div>                
-                  <div class="card-footer">
-                      <div class="d-flex justify-content-between align-items-center">
-                          <a href="#" class="card-link">Read More</a>
-                          <small class="text-muted">N 9,000,000</small>
-                        </div>                  
-                    </div>              
+              <div class="card-body">
+                <h5 class="card-title">Property title</h5>
+                <p class="card-text">This is where the property discription will go that is like the address and other
+                  neccessary content may want to go here.</p>
+                <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 3</a>
+                <a href="" class="btn btn-success btn-sm disabled">Kitchen | 1</a>
+                <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="card-link">Read More</a>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-img">
+                <div class="type">
+                  <div class="one"><small class="text-muted font-weight-bold">For Sell</small></div>
+                  <div class="two"><small class="text-light font-weight-bold">N 9,000,000</small></div>
+                </div>
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  src="assets/img/scott-webb-1ddol8rgUH8-unsplash.jpg" alt="card-image">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Property title</h5>
+                <p class="card-text">This is where the property discription will go that is like the address and other
+                  neccessary content may want to go here.</p>
+                <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 3</a>
+                <a href="" class="btn btn-success btn-sm disabled">Kitchen | 1</a>
+                <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="recent">
     <div class="album py-5 bg-light">
       <div class="container">
 
         <div class="row">
           <div class="col-12">
-            <h2 class="section-title my-4">Recent Listed Houses</h2>
+            <h2 class="section-title my-4">Recent Listings</h2>
           </div>
-          <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                  <div class="card-img">
-                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/stephan-bechert-yFV39g6AZ5o-unsplash.jpg" alt="card-image">
-                    </div>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                  <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
-                  <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
-                  <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
-                </div>                
-                <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="#" class="card-link">Read More</a>
-                        <small class="text-muted">N 9,000,000</small>
-                      </div>                  
-                  </div>              
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-img">
+                <div class="type">
+                  <div class="one"><small class="text-muted font-weight-bold">For Sell</small></div>
+                  <div class="two"><small class="text-light font-weight-bold">N 9,000,000</small></div>
+                </div>
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  src="assets/img/stephan-bechert-yFV39g6AZ5o-unsplash.jpg" alt="card-image">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Property title</h5>
+                <p class="card-text">This is where the property discription will go that is like the address and other
+                  neccessary content may want to go here.</p>
+                <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 3</a>
+                <a href="" class="btn btn-success btn-sm disabled">Kitchen | 1</a>
+                <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="card-link">Read More</a>
+                </div>
               </div>
             </div>
-  
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-img">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/irina-murza-PJMbzWAz26M-unsplash.jpg" alt="card-image">
-                      </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                      content. This content is a little bit longer.</p>
-                    <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
-                    <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
-                    <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
-                  </div>                
-                  <div class="card-footer">
-                      <div class="d-flex justify-content-between align-items-center">
-                          <a href="#" class="card-link">Read More</a>
-                          <small class="text-muted">N 9,000,000</small>
-                        </div>                  
-                    </div>              
+          </div>
+
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-img">
+                <div class="type">
+                  <div class="one"><small class="text-muted font-weight-bold">For Sell</small></div>
+                  <div class="two"><small class="text-light font-weight-bold">N 9,000,000</small></div>
+                </div>
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  src="assets/img/irina-murza-PJMbzWAz26M-unsplash.jpg" alt="card-image">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Property title</h5>
+                <p class="card-text">This is where the property discription will go that is like the address and other
+                  neccessary content may want to go here.</p>
+                <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 3</a>
+                <a href="" class="btn btn-success btn-sm disabled">Kitchen | 1</a>
+                <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="card-link">Read More</a>
                 </div>
               </div>
-  
-              <div class="col-md-4">
-                  <div class="card mb-4 shadow-sm">
-                      <div class="card-img">
-                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="assets/img/jesse-roberts-561igiTyvSk-unsplash.jpg" alt="card-image">
-                        </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                        content. This content is a little bit longer.</p>
-                      <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 2</a>
-                      <a href="" class="btn btn-success btn-sm disabled">Kitchen | 2</a>
-                      <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
-                    </div>                
-                    <div class="card-footer">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="#" class="card-link">Read More</a>
-                            <small class="text-muted">N 9,000,000</small>
-                          </div>                  
-                      </div>              
-                  </div>
-                </div>        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="album py-5 bg-light">
-      <div class="container">
-        <div class="row mb-2">
-          <div class="col-6">
-              <div class="col-12">
-                  <h2 class="section-title my-4">Agents Near You</h2>
-              </div>      
+            </div>
           </div>
-          <div class="col-6">
-              <div class="col-md-12">
-                  <div
-                    class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col py-2 px-4 d-flex flex-column position-static">
-                      <strong class="d-inline-block mb-2 text-primary">World</strong>
-                      <a href="#" class="stretched-link">Continue reading</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <svg class="round" width="70" height="70" xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                          dy=".3em">Thumbnail</text>
-                      </svg>
-                    </div>
-                  </div>
+
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-img">
+                <div class="type">
+                  <div class="one"><small class="text-muted font-weight-bold">For Sell</small></div>
+                  <div class="two"><small class="text-light font-weight-bold">N 9,000,000</small></div>
                 </div>
-                <div class="col-md-12">
-                    <div
-                      class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                      <div class="col py-2 px-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <a href="#" class="stretched-link">Continue reading</a>
-                      </div>
-                      <div class="col-auto d-none d-lg-block">
-                          <svg class="round" width="70" height="70" xmlns="http://www.w3.org/2000/svg"
-                          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                          <title>Placeholder</title>
-                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                            dy=".3em">Thumbnail</text>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                      <div
-                        class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col py-2 px-4 d-flex flex-column position-static">
-                          <strong class="d-inline-block mb-2 text-primary">World</strong>
-                          <a href="#" class="stretched-link">Continue reading</a>
-                        </div>
-                        <div class="col-auto d-none d-lg-block">
-                            <svg class="round" width="70" height="70" xmlns="http://www.w3.org/2000/svg"
-                            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                              dy=".3em">Thumbnail</text>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div
-                          class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                          <div class="col py-2 px-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-primary">World</strong>
-                            <a href="#" class="stretched-link">Continue reading</a>
-                          </div>
-                          <div class="col-auto d-none d-lg-block">
-                              <svg class="round" width="70" height="70" xmlns="http://www.w3.org/2000/svg"
-                              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                                    
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  src="assets/img/jesse-roberts-561igiTyvSk-unsplash.jpg" alt="card-image">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Property title</h5>
+                <p class="card-text">This is where the property discription will go that is like the address and other
+                  neccessary content may want to go here.</p>
+                <a href="" class="btn btn-danger btn-sm disabled">Bathroom | 3</a>
+                <a href="" class="btn btn-success btn-sm disabled">Kitchen | 1</a>
+                <a href="" class="btn btn-info btn-sm disabled">Bedroom | 2</a>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="agents">
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="col-sm-12 col-md-9 col-lg-9 mb-4">
+              <h2 class="md-4">Find Agents Near You Today</h2>
+              <p class="agents-description md-4">Get connected with top agents near you in real time, choose from a list
+                of top agents with the right property at the right price.</p>
+              <button class="btn btn-sm btn-danger">Get Started</button>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="col-md-12">
+              <div
+                class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col py-2 px-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-secondary">4 Properties</strong>
+                  <p href="#" class="text-muted mb-0">Makurdi, Benue</p>
+                </div>
+                <div class="col-auto d-lg-block">
+                  <img class="round" src="https://i.pravatar.cc/70?img=1" alt="agent-avatar">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div
+                class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col py-2 px-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-secondary">3 Properties</strong>
+                  <p href="#" class="text-muted mb-0">Makurdi, Benue</p>
+                </div>
+                <div class="col-auto d-lg-block">
+                  <img class="round" src="https://i.pravatar.cc/70?img=2" alt="agent-avatar">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div
+                class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col py-2 px-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-secondary">7 Properties</strong>
+                  <p href="#" class="text-muted mb-0">Makurdi, Benue</p>
+                </div>
+                <div class="col-auto d-lg-block">
+                  <img class="round" src="https://i.pravatar.cc/70?img=3" alt="agent-avatar">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div
+                class="row no-gutters border round overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col py-2 px-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-secondary">5 Properties</strong>
+                  <p href="#" class="text-muted mb-0">Makurdi, Benue</p>
+                </div>
+                <div class="col-auto d-lg-block">
+                  <img class="round" src="https://i.pravatar.cc/70?img=4" alt="agent-avatar">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subscribe">
     <div class="subscribe py-5 bg-light">
       <div class="container">
         <div class="row mb-2">
@@ -402,7 +494,8 @@
           </div>
           <form class="form-inline mx-auto">
             <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control mb-2 mr-sm-2" placeholder="Email address" required autofocus>
+            <input type="email" id="inputEmail" class="form-control mb-2 mr-sm-2" placeholder="Email address" required
+              autofocus>
             <button class="btn btn-primary mb-2" type="submit">Subscrbe</button>
           </form>
         </div>
@@ -410,86 +503,103 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="footer">
     <div class="container">
       <div class="row border-btm py-5">
-        <div class="col-3">
+        <div class="col-sm-6 col-md-3 col-lg-3">
           <h4>Site Map</h4>
           <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Properties</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rent</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sell</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-3">
-          <h4>Mortgage Rate</h4>
+        <div class="col-sm-6 col-md-3 col-lg-3">
+          <h4>Top Places</h4>
           <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Lagos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Abuja</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Port-Harcort</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kwara</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Benue</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-3">
+        <div class="col-sm-6 col-md-3 col-lg-3">
           <h4>Company</h4>
           <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">On Press</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-3">
+        <div class="col-sm-6 col-md-3 col-lg-3">
           <h4>Help Line</h4>
           <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="tel:+">+234 (0) 8088 0476 11</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:">terveraosu@gmail.com</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-icon" href="#">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a class="nav-icon" href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <hr>
       <div class="row copyright">
-        <p class="">All rigths reserved @truetechcode 2019</p>
+        <p class="">Build with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+            href="https://twitter.com/truetech_code" target="_blank" rel="noopener noreferrer">@truetech_code</a> design
+          concept by <a href="https://dribbble.com/raazcse" target="_blank" rel="noopener noreferrer">Surja Sen Das
+            Raj</a> & <a href="https://dribbble.com/syedraju" target="_blank" rel="noopener noreferrer">Syed Misba-Ul
+            Hussain</a> images from <a href="https://unsplash.com/" target="_blank"
+            rel="noopener noreferrer">Unsplash</a>, and icons from <a href="https://fontawesome.com/" target="_blank"
+            rel="noopener noreferrer">Fontawesome</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="js/bootstrap.min.js"></script> -->
 </body>
 
 </html>
