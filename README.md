@@ -1,6 +1,6 @@
 # Property Listing Landing Page Design
 
-This Property Listing Landing Page is developed by [@truetech_code](https://twitter.com/truetech_code) and was created using [Twitter Bootstrap](http://getbootstrap.com/), the design concept by [Surja Sen Das Raj](https://dribbble.com/raazcse) & [Syed Misba-Ul Hussain](https://dribbble.com/syedraju) images from [Unsplash](https://unsplash.com/), and icons from [Fontawesome](https://fontawesome.com/).
+This Property Listing Landing Page is developed by [@truetech_code](https://twitter.com/truetech_code) and was created using [Twitter Bootstrap](http://getbootstrap.com/), the design concept by [Surja Sen Das Raj](https://dribbble.com/raazcse) & [Syed Misba-Ul Hussain](https://dribbble.com/syedraju) images from [Unsplash](https://unsplash.com/), avatar from [Pravatar](https://pravatar.cc/), logo from [Pinterest](https://www.pinterest.com/pin/392657661238709415/) and icons from [Fontawesome](https://fontawesome.com/).
 
 ## Features
 
