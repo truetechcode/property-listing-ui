@@ -4,11 +4,11 @@ This Property Listing Landing Page is developed by [@truetech_code](https://twit
 
 ## Technologies
 
-  HTML
-  CSS
-  JAVASCRIPT
-  BOOTSTRAP
-  FONTAWESOME
+-  HTML
+-  CSS
+-  JAVASCRIPT
+-  BOOTSTRAP
+-  FONTAWESOME
 
 - [Live Demo](https://property-agent.terveraosu.now.sh/)
 
