@@ -12,6 +12,10 @@ This Property Listing Landing Page is developed by [@truetech_code](https://twit
 
 - [Live Demo](https://property-agent.terveraosu.now.sh/)
 
+## Future Ideas
+
+- Implement Routing
+
 ## Getting Started
 
 To get this project running on your machine clone the repository with this command: 
@@ -31,5 +35,7 @@ $ git clone https://github.com/truetechcode/property-listing-ui
 ## Author
 
 * **Tever Aosu** [truetechcode](https://github.com/truetechcode)
+
+## Licence
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](http://getbootstrap.com/)
