@@ -1,13 +1,35 @@
 # Property Listing Landing Page Design
 
-This Property Listing Landing Page is developed by [@truetech_code](https://twitter.com/truetech_code) and was created using [Twitter Bootstrap](http://getbootstrap.com/), the design concept by [Surja Sen Das Raj](https://dribbble.com/raazcse) & [Syed Misba-Ul Hussain](https://dribbble.com/syedraju) images from [Unsplash](https://unsplash.com/), avatar from [Pravatar](https://pravatar.cc/), logo from [Pinterest](https://www.pinterest.com/pin/392657661238709415/) and icons from [Fontawesome](https://fontawesome.com/).
+This Property Listing Landing Page is developed by [@truetech_code](https://twitter.com/truetech_code) and was created using [Twitter Bootstrap](http://getbootstrap.com/).
 
-## Features
+## Technologies
 
-This theme features several content sections, a responsive mobile friendly design.
+  HTML
+  CSS
+  JAVASCRIPT
+  BOOTSTRAP
+  FONTAWESOME
 
 - [Live Demo](https://property-agent.terveraosu.now.sh/)
 
-## Status
+## Getting Started
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/LICENSE)
+To get this project running on your machine clone the repository with this command: 
+
+```
+$ git clone https://github.com/truetechcode/property-listing-ui
+```
+
+## Credits
+
+- Design concept [Surja Sen Das Raj](https://dribbble.com/raazcse) & [Syed Misba-Ul Hussain](https://dribbble.com/syedraju) 
+- Images [Unsplash](https://unsplash.com/)
+- Avatar [Pravatar](https://pravatar.cc/) 
+- Logo [Pinterest](https://www.pinterest.com/pin/392657661238709415/)
+- Icons [Fontawesome](https://fontawesome.com/)
+
+## Author
+
+* **Tever Aosu** [truetechcode](https://github.com/truetechcode)
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](http://getbootstrap.com/)
