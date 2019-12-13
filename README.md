@@ -14,7 +14,8 @@ This Property Listing Landing Page is developed by [@truetech_code](https://twit
 
 ## Future Ideas
 
-- Implement Routing
+- Make site dynamic by implementing a backend
+- Make site a `SPA` app with React.js
 
 ## Getting Started
 
